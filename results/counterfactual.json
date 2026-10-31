@@ -1,0 +1,68 @@
+[
+  {
+    "run": "forward_block256_seed0",
+    "contexts": 500,
+    "samples_per_context": 8,
+    "target_rate_without_swap": 0.005792682926829268,
+    "target_rate_with_swap": 0.011377245508982036,
+    "original_rate_without_swap": 0.01567398119122257,
+    "original_rate_with_swap": 0.011768255884127943,
+    "target_effect": 0.005584562582152768,
+    "original_effect": -0.0039057253070946263
+  },
+  {
+    "run": "forward_block256_seed1",
+    "contexts": 500,
+    "samples_per_context": 8,
+    "target_rate_without_swap": 0.01059322033898305,
+    "target_rate_with_swap": 0.01008249312557287,
+    "original_rate_without_swap": 0.010037641154328732,
+    "original_rate_with_swap": 0.012530562347188265,
+    "target_effect": -0.0005107272134101809,
+    "original_effect": 0.0024929211928595325
+  },
+  {
+    "run": "forward_block256_seed2",
+    "contexts": 500,
+    "samples_per_context": 8,
+    "target_rate_without_swap": 0.008934072704867528,
+    "target_rate_with_swap": 0.01001564945226917,
+    "original_rate_without_swap": 0.014308426073131956,
+    "original_rate_with_swap": 0.014276649746192893,
+    "target_effect": 0.0010815767474016413,
+    "original_effect": -3.177632693906335e-05
+  },
+  {
+    "run": "reversed_block256_seed0",
+    "contexts": 500,
+    "samples_per_context": 8,
+    "target_rate_without_swap": 0.006311139160618492,
+    "target_rate_with_swap": 0.04281345565749235,
+    "original_rate_without_swap": 0.0655280585569885,
+    "original_rate_with_swap": 0.014343623323978797,
+    "target_effect": 0.03650231649687386,
+    "original_effect": -0.0511844352330097
+  },
+  {
+    "run": "reversed_block256_seed1",
+    "contexts": 500,
+    "samples_per_context": 8,
+    "target_rate_without_swap": 0.0040012311480455524,
+    "target_rate_with_swap": 0.0467412771560237,
+    "original_rate_without_swap": 0.055233549266962154,
+    "original_rate_with_swap": 0.01565858151673319,
+    "target_effect": 0.04274004600797815,
+    "original_effect": -0.039574967750228965
+  },
+  {
+    "run": "reversed_block256_seed2",
+    "contexts": 500,
+    "samples_per_context": 8,
+    "target_rate_without_swap": 0.00688145136065061,
+    "target_rate_with_swap": 0.04869684499314129,
+    "original_rate_without_swap": 0.0670584168683028,
+    "original_rate_with_swap": 0.0189873417721519,
+    "target_effect": 0.04181539363249068,
+    "original_effect": -0.0480710750961509
+  }
+]
