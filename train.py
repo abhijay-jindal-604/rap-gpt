@@ -47,7 +47,7 @@ def estimate_loss(model, data, args, device, artist_ids=None):
 
 
 def generate_text(model, corpus, args, device, warmup=256):
-    """Sample batches, discarding a fixed warm-up so every model starts from full context."""
+    """Sample batches, discarding a fixed warm-up. It fills the context window up to block 256, not at 512."""
     newline = corpus.encode("\n")[0]
     samples, by_artist = [], {name: [] for name in corpus.artists}
     conditioned = model.cfg.n_artists > 0
