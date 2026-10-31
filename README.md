@@ -33,8 +33,10 @@ mean ± standard deviation over 3 seeds.
 - **Loss hides this.** Held-out loss at context 256 is 1.401 forward and 1.385 reversed.
 - **Rhyme appears once context spans a line or more.** Reversed models show nothing at 16 or
   32 characters and start at 64. The median line is about 41 characters.
-- **More context stopped helping.** Reversed lift fell at 512, but those runs used batch 32
-  to fit the GPU, so this run can't separate the cause.
+- **More context stopped helping, as far as this shows.** Reversed lift was lower at 512, but
+  the seeds vary widely (3.2, 6.1, 3.4) and lift two lines apart barely moved. Those runs also
+  used batch 32 to fit the GPU and had a warm-up shorter than their context, so this can't
+  separate the cause.
 
 ### Does the model use the rhyme word?
 
@@ -86,8 +88,13 @@ size of the spread between seeds.
   forward and 80% real, which is why the table also counts unscored pairs as misses.
 - **Shared validation songs.** All runs share the same 55 validation songs, so the ± shows
   training variation, not generalisation to other songs.
-- **Batch size varies in effect.** Shorter contexts see fewer target characters per step, and
-  block 512 ran at batch 32.
+- **Training isn't equal across contexts.** Shorter contexts see fewer target characters per
+  step, and some stopped at or near the 5000-step cap, so they may be under-trained. Block 512
+  ran at batch 32.
+- **Sampling warm-up is 256 characters.** That fills the context window at every length except
+  512, where about the first 13% of each sample was generated with a partly filled window.
+- **The swap test samples 70 characters per next line,** which may cut off long forward lines.
+  The size of that effect wasn't measured.
 - **The metric is crude.** Dictionary pronunciations ignore delivery, and perfect rhyme misses
   much of what rap does with multisyllabic and slant rhyme.
 - **Reversal is approximate.** 12.3% of training lines end in `)`, so those don't start with
