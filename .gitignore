@@ -1,0 +1,8 @@
+# Lyrics are copyrighted: scrape your own with scrape_lyrics.py
+data/
+runs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+runs_artist/
